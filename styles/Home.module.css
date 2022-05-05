@@ -31,11 +31,12 @@ display: flex;
 }
 
 .homeimg {
-    /* transform: rotate(5deg); */
     margin-left: 15%;
     position:absolute; 
     z-index:50;
-    right: 12%
+    right: 12%;
+    height: 52%;
+    width: 23%;
 }
 
 .imgshadowteal {
@@ -46,8 +47,8 @@ display: flex;
     background-color:#2093A5; 
     opacity: 50%;
     position: absolute;
-    height: 57%;
-    width: 25%;
+    height: 52%;
+    width: 23%;
      z-index:50;
      right: 12%
 }
@@ -60,8 +61,8 @@ display: flex;
     background-color: orange; 
     opacity: 50%;
     position: absolute;
-    height: 57%;
-    width: 25%;
+    height: 52%;
+    width: 23%;
      z-index:49;
      right: 12%
 }
@@ -74,8 +75,8 @@ display: flex;
     background-color: pink; 
     opacity: 50%;
     position: absolute;
-    height: 57%;
-    width: 25%;
+    height: 52%;
+    width: 23%;
      z-index:48;
      right: 12%
 }
@@ -90,11 +91,9 @@ display: flex;
 .rightsidehome h1{
    font-size: 70px;
    font-family: "Quicksand", sans-serif;
-   /* background-color: #2093A5; */
    width:110%;
    text-align: center;
    text-align: left;
-   /* padding-left: 1rem; */
   
 }
 
@@ -102,10 +101,8 @@ display: flex;
     font-size: 40px;
     font-family: "Quicksand", sans-serif;
     font-style: italic;
-    /* background-color:orange; */
     width: 80%;
     text-align: left;
-    /* padding-left: 1rem; */
  }
 
 .homebtns {

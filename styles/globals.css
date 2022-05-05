@@ -19,33 +19,46 @@ a {
 }
 
 #navbarNav {
-  justify-content: space-between;
+  justify-content: center;
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
 }
 
-#nav-link {
+#navlink {
   color: #000000;
 }
 
-#social-icons {
-  width: 4%;
-  font-size: 30px;
-  display: flex;
-  justify-content: space-around;
+#navlink:hover {
+  color: #2093A5;
 }
 
-#about-btn {
+#social-icons {
+  margin-top: 0.5rem;
+  width: 10%;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#modal-btn {
+  background-color: transparent;
+  font-size: 20px;
+  width: 10rem;
+  margin-right: 3rem;
+}
+#home-btn {
   background-color: transparent;
   font-size: 20px;
   width: 10rem;
   margin-right: 3rem;
 }
 
-#projects-btn {
-  background-color: transparent;
-  font-size: 20px;
-  width: 10rem;
+#home-btn:hover {
+  background-color: #2093A5;
+  color: #ffff;
+  border: none
 }
+
+

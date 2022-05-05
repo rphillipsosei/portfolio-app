@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav } from "react-bootstrap/Nav";
-import { AiFillGithub, AiFillLinkedin, AiFillHome } from "react-icons/Ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/Ai";
+import { MdEmail } from "react-icons/Md"
 import Link from "next/link";
 
 export default Nav = () => {
@@ -20,34 +21,22 @@ export default Nav = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <Link href="/" id="home-btn">
-              <a> <AiFillHome />
-             </a>
-            </Link>
-            <ul className="navbar-nav">
-              {/* <Link href="/projects" className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  id="nav-link"
-                >
-                  PROJECTS
-                </a>
-              </Link>
-              <li className="nav-item">
-                <a className="nav-link disabled" href="#">
-                  /
-                </a>
-              </li> */}
-              <Link href="contact" className="nav-item">
-                <a className="nav-link" id="nav-link">
-                  CONTACT
-                </a>
-              </Link>
-            </ul>
             <div id="social-icons">
-              <AiFillGithub />
+              <Link href="https://linkedin.com/in/rphillipsosei">
+              <a id="navlink">
               <AiFillLinkedin />
+              </a>
+              </Link>
+              <Link href="https://github.com/rphillipsosei">
+              <a id="navlink">
+              <AiFillGithub />
+              </a>
+              </Link>
+              <Link href="/contact">
+              <a id="navlink">
+              <MdEmail/>
+              </a>
+              </Link>
             </div>
           </div>
         </div>
