@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav } from "react-bootstrap/Nav";
 import { AiFillGithub, AiFillLinkedin, AiFillHome } from "react-icons/Ai";
+import Link from "next/link";
 
 export default Nav = () => {
   return (
@@ -19,30 +20,30 @@ export default Nav = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <div id="home-btn">
-              <AiFillHome />
-            </div>
+            <Link href="/" id="home-btn">
+              <a> <AiFillHome />
+             </a>
+            </Link>
             <ul className="navbar-nav">
-              <li className="nav-item">
+              <Link href="/projects" className="nav-item">
                 <a
                   className="nav-link active"
                   aria-current="page"
                   id="nav-link"
-                  href="#"
                 >
                   PROJECTS
                 </a>
-              </li>
+              </Link>
               <li className="nav-item">
                 <a className="nav-link disabled" href="#">
                   /
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" id="nav-link" href="#">
+              <Link href="contact" className="nav-item">
+                <a className="nav-link" id="nav-link">
                   CONTACT
                 </a>
-              </li>
+              </Link>
             </ul>
             <div id="social-icons">
               <AiFillGithub />
