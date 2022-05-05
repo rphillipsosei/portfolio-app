@@ -15,16 +15,19 @@ export default function Home() {
 
   <div  className={styles.rightsidehome}>
     <p>
-<h1>Rhoda Phillips-Osei</h1>
+<h1>RHODA PHILLIPS-OSEI</h1>
 <h3>Full Stack Web Developer</h3>
+ <div class={styles.homebtns}>
+ <button type="button" class="btn btn-outline-dark" id="about-btn">ABOUT</button>
+ <button type="button" class="btn btn-outline-dark" id="projects-btn">PROJECTS</button>
+ </div>
  </p> 
- <div class="homebtns">
- <button type="button" class="btn btn-outline-primary">About Me</button>
- <button type="button" class="btn btn-outline-primary">Projects</button>
+
  </div>
- </div>
-  <div   className={styles.leftsidehome}>
-   
+  <div className={styles.leftsidehome}>
+    <div className={styles.imgshadowteal}></div>
+    <div className={styles.imgshadoworange}></div>
+    <div className={styles.imgshadowpink}></div>
   <img src="/rhopolaroid.png" alt="Rhoda Phillips-Osei" className={styles.homeimg}></img>
  </div>
 </div>

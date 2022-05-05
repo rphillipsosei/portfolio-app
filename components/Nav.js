@@ -25,7 +25,7 @@ export default Nav = () => {
              </a>
             </Link>
             <ul className="navbar-nav">
-              <Link href="/projects" className="nav-item">
+              {/* <Link href="/projects" className="nav-item">
                 <a
                   className="nav-link active"
                   aria-current="page"
@@ -38,7 +38,7 @@ export default Nav = () => {
                 <a className="nav-link disabled" href="#">
                   /
                 </a>
-              </li>
+              </li> */}
               <Link href="contact" className="nav-item">
                 <a className="nav-link" id="nav-link">
                   CONTACT
