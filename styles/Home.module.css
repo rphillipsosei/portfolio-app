@@ -1,5 +1,53 @@
-.right-side-home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+
+.container {
+display: flex;
+    width: 100vw;
+    height: auto; 
+ 
 }
+
+
+.rightsidehome {
+    flex-direction: column;
+    height: 100vh;
+    width: 55vw;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+  
+}
+
+.leftsidehome {
+    height: 100vh;
+    width: 45vw;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.homeimg {
+    transform: rotate(10deg);
+}
+
+.rightsidehome p {
+    flex-direction: row;
+    position: absolute;
+    top: 30%
+}
+.rightsidehome h1{
+   font-size: 80px;
+   font-family: "Quicksand", sans-serif;
+  
+}
+
+.rightsidehome h3{
+    font-size: 40px;
+    font-family: "Quicksand", sans-serif;
+    font-style: italic;
+ }
+
+ .homebtns {
+     
+ }
