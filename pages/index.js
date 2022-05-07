@@ -4,11 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/Home.module.css";
 import Modal from "react-modal";
 import { Carousel } from "react-bootstrap";
+import { GrFormNextLink, GrFormPreviousLink } from 'react-icons/Gr'
 
 const carousel = {
-  height: "80%",
-  width: "100%",
-  backgroundColor: "transparent",
+  paddingTop: "2rem",
+  // height: "80%",
+  // width: "70%",
+
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -16,9 +18,8 @@ const carousel = {
 
 const carouselitem = {
   height: "90%",
-  width: "70%"
-  
-}
+  width: "70%",
+};
 
 export default function Home() {
   <Head>
@@ -124,53 +125,69 @@ export default function Home() {
                     onRequestClose={() => setProjectsIsOpen(false)}
                     style={{
                       overlay: {
-                        backgroundColor: "rgba(60, 60, 60, 0.55)",
+                        backgroundColor: "rgba(60, 60, 60, 0.75)",
                       },
                       content: {
                         // color: "orange",
                       },
                     }}
                   >
-                    <Carousel interval={null} style={carousel}>
-                      <Carousel.Item>
-                        <div className={styles.tweetercontainer}>
-                        <img
-                          className="d-block w-100"
-                          src="/tweeterdemo.gif"
-                          alt="First slide"
-                          height="400px"
-                          width="50"
-                        />
+                    <div
+                      id="carouselExampleControls"
+                      class="carousel slide"
+                      data-ride="carousel"
+                    >
+                      <div classNames="carousel-inner">
+                        <div className="carousel-item active">
+                          <img
+                            className={styles.moonbeam}
+                            src="/moonbeamdemo6.gif"
+                            alt="Moonbeam Trading Company"
+                          ></img>
                         </div>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <div className={styles.moonbeamcontainer}>
+
+                        <div className="carousel-item">
+                          <img
+                            classNames="d-block w-100"
+                            src="/tweeterdemo.gif"
+                            alt="Tweeter"
+                          ></img>
+                        </div>
+                        <div className="carousel-item">
                           <img
                             className="d-block w-100"
-                            src="/moonbeamdemo6.gif"
-                            alt="Second slide"
-                            height="400px"
-                            width="50px"
-                            id="moonbeam"
-                          />
+                            src="..."
+                            alt="Third slide"
+                          ></img>
                         </div>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <img
-                          className="d-block w-100"
-                          src="holder.js/800x400?text=Third slide&bg=20232a"
-                          alt="Third slide"
-                        />
-
-                        <Carousel.Caption>
-                          <h3>Third slide label</h3>
-                          <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl
-                            consectetur.
-                          </p>
-                        </Carousel.Caption>
-                      </Carousel.Item>
-                    </Carousel>
+                      </div>
+                      <a
+                      id="modal-nav"
+                        class="carousel-control-prev"
+                        href="#carouselExampleControls"
+                        role="button"
+                        data-slide="prev"
+                      >
+                        <span
+                          // className="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a
+                      id="modal-nav"
+                        class="carousel-control-next"
+                        href="#carouselExampleControls"
+                        role="button"
+                        data-slide="next"
+                      >
+                        <span
+                          // class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
                   </Modal>
                 </div>
               </div>

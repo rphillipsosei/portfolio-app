@@ -61,4 +61,16 @@ a {
   border: none
 }
 
+#carouselExampleControls {
+width: 100%
+}
 
+a span {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+span .carousel-control-next-icon {
+display: none;
+}
