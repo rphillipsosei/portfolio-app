@@ -5,6 +5,8 @@ import styles from "../styles/Home.module.css";
 import Modal from "react-modal";
 import { Carousel } from "react-bootstrap";
 import { GrFormNextLink, GrFormPreviousLink } from 'react-icons/Gr'
+import ImageSlider from '../components/ImageSlider';
+import { SliderData } from '../components/SliderData';
 
 const carousel = {
   paddingTop: "2rem",
@@ -125,69 +127,25 @@ export default function Home() {
                     onRequestClose={() => setProjectsIsOpen(false)}
                     style={{
                       overlay: {
-                        backgroundColor: "rgba(60, 60, 60, 0.75)",
+                        backgroundColor: "rgba(60, 60, 60, 0.95)",
                       },
                       content: {
                         // color: "orange",
                       },
                     }}
                   >
-                    <div
-                      id="carouselExampleControls"
-                      class="carousel slide"
-                      data-ride="carousel"
-                    >
-                      <div classNames="carousel-inner">
-                        <div className="carousel-item active">
-                          <img
-                            className={styles.moonbeam}
-                            src="/moonbeamdemo6.gif"
-                            alt="Moonbeam Trading Company"
-                          ></img>
-                        </div>
 
-                        <div className="carousel-item">
-                          <img
-                            classNames="d-block w-100"
-                            src="/tweeterdemo.gif"
-                            alt="Tweeter"
-                          ></img>
-                        </div>
-                        <div className="carousel-item">
-                          <img
-                            className="d-block w-100"
-                            src="..."
-                            alt="Third slide"
-                          ></img>
-                        </div>
-                      </div>
-                      <a
-                      id="modal-nav"
-                        class="carousel-control-prev"
-                        href="#carouselExampleControls"
-                        role="button"
-                        data-slide="prev"
-                      >
-                        <span
-                          // className="carousel-control-prev-icon"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a
-                      id="modal-nav"
-                        class="carousel-control-next"
-                        href="#carouselExampleControls"
-                        role="button"
-                        data-slide="next"
-                      >
-                        <span
-                          // class="carousel-control-next-icon"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div>
+
+                     <div className="wrapper">
+        <container className="backgroundstyling" >
+        <container className="">
+          <ImageSlider slides={SliderData}/>
+         
+       </container>
+       </container>
+      </div>
+
+
                   </Modal>
                 </div>
               </div>
