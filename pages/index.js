@@ -7,6 +7,7 @@ import { Carousel } from "react-bootstrap";
 import { GrFormNextLink, GrFormPreviousLink } from 'react-icons/Gr'
 import ImageSlider from '../components/ImageSlider';
 import { SliderData } from '../components/SliderData';
+import BioData from '../components/BioData.js'
 
 const carousel = {
   paddingTop: "2rem",
@@ -49,68 +50,14 @@ export default function Home() {
                   onRequestClose={() => setAboutIsOpen(false)}
                   style={{
                     overlay: {
-                      backgroundColor: "rgba(60, 60, 60, 0.55)",
+                      backgroundColor: "rgba(60, 60, 60, 0.95)",
                     },
                     content: {
                       color: "orange",
                     },
                   }}
                 >
-                  <div className={styles.aboutmodule}>
-                    <div className={styles.aboutwrapper}>
-                      <div className={styles.blurb}>
-                        <p>
-                          <i>
-                            <b>Hello!</b>
-                          </i>
-                          <br></br>
-                          <br></br>My name is Rhoda, and I am a junior
-                          full-stack developer from Toronto, Ontario, Canada.
-                          <br></br>
-                          <br></br>
-                          Prior to the pandemic, I had my sights set on building
-                          a career in Mental Health. While this field is still
-                          of big interest to me, I felt a push for a new
-                          challenge in a field that is growing, can keep me on
-                          my toes, and allows me to preserve more emotional
-                          energy for those close to me.
-                          <br></br>
-                          <br></br>In late 2021, I made the great decision to
-                          enrol in a web development bootcamp at Lighthouse
-                          Labs. It is here that I became familiarized with and
-                          competent in a full stack breadth of technologies
-                          through self-study, collaboration and the building of
-                          projects.
-                          <br></br>
-                          <br></br>For the present and to the future, I look to
-                          advance my competencies in the technologies listed
-                          here, as well as to add new ones to the mix.
-                          <br></br>{" "}
-                        </p>
-                      </div>
-
-                      <div className={styles.skills}>
-                        <p>
-                          <h2 align="center">SKILLS</h2>
-                          <br></br>
-                          <b>Front End Technologies</b>
-                          <br></br>
-                          Javascript (jQuery, AJAX, React, Next.js), HTML, CSS,
-                          SCSS/SASS, MaterialUI, Bootstrap
-                          <br></br>
-                          <br></br>
-                          <b>Back End Technologies</b>
-                          <br></br>
-                          Javascript (Node.js, Express.js), Ruby, bCrpyt,
-                          PostgreSQL<br></br>
-                          <br></br>
-                          <b>Auxiliary Technologies</b>
-                          <br></br>
-                          Git, Mocha, Chai, Jest, Vercel
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                 <BioData/>
                 </Modal>
               </div>
             )}
@@ -166,8 +113,3 @@ export default function Home() {
     </div>
   );
 }
-
-const carouselstyle = {
-  height: "100%",
-  width: "100%",
-};

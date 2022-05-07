@@ -125,46 +125,4 @@
   align-items: center;
 }
 
-.aboutmodule {
-      width: 100%;
-}
-
-.aboutwrapper {
-  display: flex;
-  flex-direction: row;
-
-  height: auto;
-}
-
-.aboutmodule {
-  flex-direction: column;
-  display: flex;
-
-}
-
-.blurb {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-height: 70vh;
-align-items: center;
-font-family: "Quicksand", sans-serif;
-color: black;
-}
-
-
-.skills {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-family: "Quicksand", sans-serif;
-color: black;
-text-align: center;
-height: 70vh;
-align-items: center;
-padding:2rem;
-}
-
 
