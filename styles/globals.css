@@ -9,6 +9,8 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
 }
 
+
+
 a {
   color: inherit;
   text-decoration: none;
@@ -24,6 +26,17 @@ a {
   font-size: 18px;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
+}
+
+#homelink {
+  color: #000000;
+  position: absolute;
+  left: 2%;
+  font-size: 30px;
+}
+
+#homelink:hover {
+  color: #2093A5;
 }
 
 #navlink {
@@ -61,9 +74,7 @@ a {
   border: none
 }
 
-/* #carouselExampleControls {
-width: 100%
-} */
+
 
 a span {
   color: black;
@@ -73,4 +84,75 @@ a span {
 
 span .carousel-control-next-icon {
 display: none;
+}
+
+
+form {
+text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-bottom: 2em;
+  align-items: center;
+  width: 100%;
+}
+
+input {
+  width: 60%;
+  height: 30px;
+  margin-bottom: 3rem;
+  font-family: "Quicksand"
+}
+
+textarea {
+width: 60%;
+font-family: "Quicksand"
+}
+
+#form-control {
+  width:90%;
+  margin-bottom: 1rem;
+}
+
+#contact-btn {
+  background-color: transparent;
+  font-size: 20px;
+  width: 10rem;
+}
+
+
+#contact-btn:hover {
+  background-color: #2093A5;
+  color: #ffff;
+  border: none;
+  margin-top: 3px;
+}
+
+.hovertext {
+  position: relative;
+  font-size: 12px;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
 }

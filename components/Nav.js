@@ -1,13 +1,19 @@
 import React from "react";
 import { Nav } from "react-bootstrap/Nav";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/Ai";
-import { MdEmail } from "react-icons/Md"
+import { AiFillGithub, AiFillLinkedin, AiFillHome } from "react-icons/Ai";
+import { MdEmail } from "react-icons/Md";
 import Link from "next/link";
+
 
 export default Nav = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Link href="/">
+          <a id="homelink">
+            <AiFillHome />
+          </a>
+        </Link>
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -23,19 +29,19 @@ export default Nav = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <div id="social-icons">
               <Link href="https://linkedin.com/in/rphillipsosei">
-              <a id="navlink">
-              <AiFillLinkedin />
-              </a>
+                <a id="navlink">
+                  <AiFillLinkedin />
+                </a>
               </Link>
               <Link href="https://github.com/rphillipsosei">
-              <a id="navlink">
-              <AiFillGithub />
-              </a>
+                <a id="navlink">
+                  <AiFillGithub />
+                </a>
               </Link>
               <Link href="/contact">
-              <a id="navlink">
-              <MdEmail/>
-              </a>
+                <a id="navlink">
+                  <MdEmail />
+                </a>
               </Link>
             </div>
           </div>

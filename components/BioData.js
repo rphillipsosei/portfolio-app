@@ -1,35 +1,49 @@
 import React from "react";
 import styles from "../styles/BioData.module.css";
+import { motion } from "framer-motion"
 function BioData() {
   return (
-    <div>
+    <motion.div 
+    initial="hidden" animate="visible" variants={{ 
+        hidden: {
+            opacity: 0
+        },
+    visible: {
+        opacity: 1,
+        transition: {
+            delay: .1
+        }
+    },
+    }}>
       <div className={styles.aboutmodule}>
         <div className={styles.aboutwrapper}>
           <div className={styles.blurb}>
             <p>
-              <i>
-                <b>Hello!</b>
-              </i>
               <br></br>
-              <br></br>My name is Rhoda, and I am a Junior Full Stack Developer
-              from Toronto, Ontario, Canada.
+              <br></br>{" "}
+              <b>
+                Hi!<br></br><br></br> <i>My name is Rhoda, and I am a Full Stack Developer
+                from Toronto, Ontario, Canada.</i>
+              </b>
               <br></br>
-              <br></br>My background includes work in Social Services,
-              Education, and Customer Service. After some time working in these
-              fields, I felt a push for a new challenge, and thankfully found it
-              in a field that is growing, can keep me on my toes through
-              constant development, and provokes curiosity and creativity.
-              <br></br>
-              <br></br>Coming from a background that is largely people-based, I
-              am always thinking about how my work can improve other's
-              experiences. As a Junior Dev, I look to questions of how I can
-              make my coding practice more efficient in its readability,
-              particularly for peers to build upon and manipulate. I also think
-              about the user, and how this quest for coding efficiency bears
-              fruit in apps that are scalable, and respond quickly over servers.
+              <br></br>I come from a professional background that includes work
+              in Social Services, Education, and Customer Service. After many years
+              working between these fields, I felt a push for a new challenge,
+              and thankfully found it in an area that is growing, can keep me on
+              my toes through constant development, and provokes curiosity and
+              creativity.
               <br></br>
               <br></br>
-              To end things off on a less formal note, in my spare time I enjoy sewing, a good deadlift, and cat videos 😊
+              Being that I am from a largely people-based background, I feel I have a lot to offer. As a Junior Dev, I think to how I can write more efficient code that peers can
+              build upon and manipulate. I think to learning what makes more scalable databases, and apps
+               run  as quickly and efficiently as possible over servers. That is to say I am always thinking about how my work can improve other's
+              experiences. 
+              <br></br>
+              <br></br>
+              To end things off on a less formal note, in my spare time I enjoy
+              sewing, a good deadlift, and cat videos 😊
+              <br></br><br></br>
+              
             </p>
           </div>
 
@@ -40,7 +54,7 @@ function BioData() {
               <b>Front End Technologies</b>
               <br></br>
               Javascript (jQuery, AJAX, React, Next.js), HTML, CSS, SCSS/SASS,
-              MaterialUI, Bootstrap
+              MaterialUI, Bootstrap, React Bootstrap
               <br></br>
               <br></br>
               <b>Back End Technologies</b>
@@ -55,7 +69,7 @@ function BioData() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -8,21 +8,8 @@ import { GrFormNextLink, GrFormPreviousLink } from 'react-icons/Gr'
 import ImageSlider from '../components/ImageSlider';
 import { SliderData } from '../components/SliderData';
 import BioData from '../components/BioData.js'
+import { motion } from 'framer-motion'
 
-const carousel = {
-  paddingTop: "2rem",
-  // height: "80%",
-  // width: "70%",
-
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-};
-
-const carouselitem = {
-  height: "90%",
-  width: "70%",
-};
 
 export default function Home() {
   <Head>
@@ -33,14 +20,28 @@ export default function Home() {
   const [projectsIsOpen, setProjectsIsOpen] = useState(false);
 
   return (
-    <div className={styles.container}>
+    <motion.div 
+    initial="hidden" animate="visible" variants={{ 
+      hidden: {
+          // scale: .8,
+          opacity: 0
+      },
+  visible: {
+      // scale: 1,
+      opacity: 1,
+      transition: {
+          delay: .7
+      }
+  },
+  }}
+    className={styles.container}>
       <div className={styles.leftsidehome}>
         <p>
-          <h1>RHODA PHILLIPS-OSEI</h1>
+          <h1>Rhoda Phillips-Osei    </h1>
           <h3>Full Stack Web Developer</h3>
           <div class={styles.homebtns}>
             <button id="home-btn" onClick={() => setAboutIsOpen(true)}>
-              ABOUT{" "}
+              ABOUT
             </button>
             {setAboutIsOpen && (
               <div className={styles.modalpositioning}>
@@ -50,11 +51,10 @@ export default function Home() {
                   onRequestClose={() => setAboutIsOpen(false)}
                   style={{
                     overlay: {
-                      backgroundColor: "rgba(60, 60, 60, 0.95)",
+                      backgroundColor: "rgba(60, 60, 60, 0.85)",
                     },
                     content: {
-                      color: "orange",
-                    },
+                                         },
                   }}
                 >
                  <BioData/>
@@ -74,17 +74,16 @@ export default function Home() {
                     onRequestClose={() => setProjectsIsOpen(false)}
                     style={{
                       overlay: {
-                        backgroundColor: "rgba(60, 60, 60, 0.95)",
+                        backgroundColor: "rgba(60, 60, 60, 0.85)",
                       },
                       content: {
-                        // color: "orange",
                       },
                     }}
                   >
 
 
                      <div className="wrapper">
-        <container className="backgroundstyling" >
+        <container >
         <container className="">
           <ImageSlider slides={SliderData}/>
          
@@ -110,6 +109,6 @@ export default function Home() {
           className={styles.homeimg}
         ></img>
       </div>
-    </div>
+    </motion.div>
   );
 }

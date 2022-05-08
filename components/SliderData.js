@@ -19,11 +19,20 @@ export const SliderData = [
     width: "220px",
   },
   {
+    image: "/tinyappdemo.gif",
+    title: "Tinyapp",
+    description: "An app where users can create and store shortened links for everyday websites.",
+    technologies: "Express, Node.js, bCrypt, EJS, Bootstrap",
+    github: "https://github.com/rphillipsosei/tinyapp",
+    height: "400px",
+    width: "750px",
+  },
+  {
     image: "/portfolio-app.webp",
     title: "Profile App",
     description: "This very site! For you to get to know more about me.",
     technologies: "React, NextJS, Framer Motion",
-    github: "https://github.com/rphillipsosei/rhoda-portfolio-app",
+    github: "https://github.com/rphillipsosei/portfolio-app",
     height: "400px",
     width: "750px",
   }

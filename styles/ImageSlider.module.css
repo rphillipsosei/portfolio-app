@@ -4,7 +4,6 @@
   align-items: center;
   width: 45.5%;
   height: 100%;
-  /* border: 3px solid black; */
   padding: 1rem;
   align-items: center;
 }
@@ -20,18 +19,19 @@
   top: 50%;
   right: 1%;
   font-size: 300%;
-  color: #000000;
+  color: #ffff;
   z-index: 10;
   cursor: pointer;
   user-select: none;
 }
+
 
 .leftarrow {
   position: absolute;
   top: 50%;
   left: 1%;
   font-size: 300%;
-  color: #000000;
+  color: #ffff;
   z-index: 10;
   cursor: pointer;
 }
@@ -42,15 +42,19 @@
   display: flex;
   justify-content: center;
   width: 40.6vw;
-  background-color: rgba(64, 138, 139, 0.8);
-  font-family: "Quicksad", sans-serif;
+  background-color: rgba(105, 187, 219, 0.65);
+  font-family: "Quicksand", sans-serif;
   font-size: 200%;
   z-index: 0;
   margin-bottom: 0.8rem;
 }
 
-.header h1 i {
-  font-size: 12px;
+.projectcontainer {
+  height: 47%;
+  width: 82%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projecttitle {
@@ -58,9 +62,8 @@
   align-items: center;
   justify-content: center;
   width: 40.6vw;
-  background-color: rgba(242, 242, 242, 0.8);
-  border: 2px solid black;
-  font-family: "Quicksad", sans-serif;
+  background-color: rgba(238, 174, 63, 0.65);
+  font-family: "Quicksand", sans-serif;
   font-size: 20px;
   z-index: 0;
   flex-direction: column;
@@ -72,9 +75,8 @@
   justify-content: center;
   width: 40.6vw;
   height: 19vh;
-  background-color: rgba(242, 242, 242, 0.8);
-  border: 2px solid black;
-  font-family: "Quicksad", sans-serif;
+  background-color:  rgba(242, 242, 242, 0.65);
+  font-family: "Quicksand", sans-serif;
   font-size: 100%;
   z-index: 0;
   padding: 1rem;
@@ -97,9 +99,11 @@
 .viewapp {
   margin-top: -2rem;
   font-size: 16px;
+  text-decoration: none;
+  color: black
 }
 
-@media screen and (max-width: 1700px) {
+/* @media screen and (max-width: 1700px) {
   .imgcontainer {
     margin-top: 0.8%;
     width: 80%;
@@ -119,9 +123,9 @@
     height: 17vh;
     font-size: 90%;
   }
-}
+} */
 
-@media screen and (max-width: 1400px) {
+/* @media screen and (max-width: 1400px) {
   .rightarrow {
     right: 0%;
     font-size: 200%;
@@ -151,9 +155,9 @@
     width: 51vw;
     height: 28%;
   }
-}
+} */
 
-@media screen and (min-width: 500px) and (max-width: 1080px) {
+/* @media screen and (min-width: 500px) and (max-width: 1080px) {
   .rightarrow{
     color: white;
   }
@@ -161,9 +165,9 @@
   .projecttitle {
     font-size: 110%;
   }
-}
+} */
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .imgcontainer {
     position: absolute;
     top: -14%;
@@ -189,4 +193,4 @@
     margin-top: 0rem;
     font-size: 80%
   }
-}
+} */

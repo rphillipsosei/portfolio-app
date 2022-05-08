@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Satisfy&display=swap');
+
 
 .aboutmodule {
     width: 100%;
     background-color: transparent;
+    flex-direction: column;
+display: flex;
 }
 
 .aboutwrapper {
@@ -11,11 +15,7 @@ flex-direction: row;
 height: auto;
 }
 
-.aboutmodule {
-flex-direction: column;
-display: flex;
 
-}
 
 .blurb {
 width: 65%;
@@ -28,9 +28,12 @@ align-items: center;
 font-family: "Quicksand", sans-serif;
 color: black;
 padding: 3rem;
-background-color:rgba(238, 174, 63, 0.71);
 margin-right: 1rem;
-border-radius: 20px;
+background-color:rgba(238, 174, 63, 0.75);
+}
+
+.blurb p b {
+    font-size: 18px;
 }
 
 
@@ -44,6 +47,5 @@ text-align: center;
 height: 70vh;
 align-items: center;
 padding:2rem;
-border-radius: 20px;
-background-color: rgba(105, 187, 219, 0.71)
+background-color: rgba(105, 187, 219, 0.75)
 }

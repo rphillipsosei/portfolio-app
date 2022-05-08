@@ -29,7 +29,7 @@ const ImageSlider = ({ slides }) => {
           {" "}
           <BiLeftArrow className={styles.leftarrow} onClick={prevSlide} />
           <div align="center" className={styles.header}>
-            <h1>Projects <br></br> <i>(More to be added soon)</i></h1>
+            <h1>Projects</h1>
             
           </div>
           <BiRightArrow className={styles.rightarrow} onClick={nextSlide} />
@@ -42,9 +42,10 @@ const ImageSlider = ({ slides }) => {
                 {index === current && (
                   <div className={styles.slidercontent}>
                     <div className={styles.projecttitle}>
-                      <b>{slide.title}</b>
+                      <i>{slide.title}</i>
                      
                     </div>
+                    <div className={styles.projectcontainer}>
                     <Image
                       src={slide.image}
                       alt="Project gif"
@@ -52,6 +53,7 @@ const ImageSlider = ({ slides }) => {
                       width={slide.width}
                       height={slide.height}
                     />
+                    </div>
                     <div className={styles.projectdesc}>
                       {slide.description} <br></br>
                       <br></br>

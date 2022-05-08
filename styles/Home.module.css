@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Satisfy&display=swap');
 
 .container {
   display: flex;
@@ -82,14 +82,16 @@
   margin-left: 10%;
 }
 .leftsidehome h1 {
-  font-size: 70px;
-  font-family: "Quicksand", sans-serif;
-  width: 110%;
+  font-size: 110px;
+  font-family: "Satisfy", sans-serif;
+  width: 130%;
   text-align: center;
   text-align: left;
+
 }
 
 .leftsidehome h3 {
+  margin-top: -1rem;
   font-size: 40px;
   font-family: "Quicksand", sans-serif;
   font-style: italic;
@@ -107,11 +109,11 @@
 .modal {
   background-color: transparent;
   border-radius: 10px;
-  width: 80%;
+  width: 55%;
   height: 80%;
   position: relative;
   top: 10%;
-  left: 10%;
+  left: 22%;
   z-index: 2;
   display: flex;
   justify-content: center;
