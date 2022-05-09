@@ -3,10 +3,36 @@ import Head from "next/head"
 import styles from "../styles/Contact.module.css"
 import { motion } from "framer-motion"
 import emailjs from '@emailjs/browser';
-import Link from 'next/link'
+import toast, { Toaster } from 'react-hot-toast';
+
+
+// toast.configure()
 export default function Contact() {
  
   const form = useRef();
+
+const success = () => {
+  toast('Message failed to send. Please contact me on LinkedIn, or try again later!', {
+    style: {
+      border: '2px solid #2093A5',
+      marginTop: '7rem',
+      borderRadius: 0,
+      backgroundColor: 'rgba(242, 242, 242, 0.65)',
+      textAlign: 'center'
+    },
+  });
+}
+
+const failure = () => {
+  toast('Message failed to send. Please try contacting me on LinkedIn, or trying again later.', {
+    style: {
+      border: '2px solid #2093A5',
+      marginTop: '7rem',
+      borderRadius: 0,
+      backgroundColor: 'rgba(242, 242, 242, 0.65)'
+    },
+  });
+}
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -14,13 +40,16 @@ export default function Contact() {
     emailjs.sendForm('service_ayt7rnv', 'template_znkglms', form.current, 'jPUiz2BDB4KS4iN9p')
       .then((result) => {
           console.log(result.text);
+          success()
       }, (error) => {
           console.log(error.text);
+          failure()
       });
   };
   
   return (
     <div>
+      <div><Toaster/></div>
     <Head>
  <title>Rhoda Phillips-Osei | Contact Me </title>
 </Head>
@@ -65,11 +94,10 @@ export default function Contact() {
               <input type="hidden" name="_next" value="http://localhost:3000/thanks"></input>
               <input type="hidden" name="_subject" value="New message from rhoda.tech"></input>
               <br></br>
-              <Link href="/thanks">
-                <a>
+            
                   <button id="contact-btn" value="Send">
               SEND
-            </button></a></Link>
+            </button>
            
             </form>
 

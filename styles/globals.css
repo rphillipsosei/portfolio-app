@@ -26,6 +26,7 @@ a {
   font-size: 18px;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
+  border-bottom: 2px;
 }
 
 #homelink {
@@ -33,6 +34,7 @@ a {
   position: absolute;
   left: 2%;
   font-size: 30px;
+  cursor: pointer
 }
 
 #homelink:hover {
@@ -41,6 +43,7 @@ a {
 
 #navlink {
   color: #000000;
+  cursor: pointer
 }
 
 #navlink:hover {

@@ -3,6 +3,7 @@ import { Nav } from "react-bootstrap/Nav";
 import { AiFillGithub, AiFillLinkedin, AiFillHome } from "react-icons/Ai";
 import { MdEmail } from "react-icons/Md";
 import Link from "next/link";
+import { motion } from "framer-motion"
 
 
 export default Nav = () => {
@@ -10,9 +11,14 @@ export default Nav = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link href="/">
-          <a id="homelink">
+          <motion.a
+          whileHover={{
+            scale: 1.1,
+          }}
+          whileTap={{ scale: 1.1 }}
+          id="homelink">
             <AiFillHome />
-          </a>
+          </motion.a>
         </Link>
         <div className="container-fluid">
           <button
@@ -29,19 +35,34 @@ export default Nav = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <div id="social-icons">
               <Link href="https://linkedin.com/in/rphillipsosei">
-                <a id="navlink">
+                <motion.a 
+                    whileHover={{
+                      scale: 1.1,
+                    }}
+                    whileTap={{ scale: 1.1 }}
+                id="navlink">
                   <AiFillLinkedin />
-                </a>
+                </motion.a>
               </Link>
               <Link href="https://github.com/rphillipsosei">
-                <a id="navlink">
+              <motion.a 
+                    whileHover={{
+                      scale: 1.1,
+                    }}
+                    whileTap={{ scale: 1.1 }}
+                     id="navlink">
                   <AiFillGithub />
-                </a>
+                </motion.a>
               </Link>
               <Link href="/contact">
-                <a id="navlink">
+                <motion.a
+                whileHover={{
+                  scale: 1.1,
+                }}
+                whileTap={{ scale: 1.1 }}
+                id="navlink">
                   <MdEmail />
-                </a>
+                </motion.a>
               </Link>
             </div>
           </div>
