@@ -3,8 +3,6 @@ import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/Home.module.css";
 import Modal from "react-modal";
-import { Carousel } from "react-bootstrap";
-import { GrFormNextLink, GrFormPreviousLink } from 'react-icons/Gr'
 import ImageSlider from '../components/ImageSlider';
 import { SliderData } from '../components/SliderData';
 import BioData from '../components/BioData.js'
@@ -12,22 +10,20 @@ import { motion } from 'framer-motion'
 
 
 export default function Home() {
-  <Head>
-    <title>Rhoda Phillips-Osei | Web Dev</title>
-  </Head>;
-
   const [aboutIsOpen, setAboutIsOpen] = useState(false);
   const [projectsIsOpen, setProjectsIsOpen] = useState(false);
 
   return (
+    <div>
+    <Head>
+ <title>Rhoda Phillips- Osei | Web Dev </title>
+</Head>
     <motion.div 
     initial="hidden" animate="visible" variants={{ 
       hidden: {
-          // scale: .8,
           opacity: 0
       },
   visible: {
-      // scale: 1,
       opacity: 1,
       transition: {
           delay: .7
@@ -54,7 +50,8 @@ export default function Home() {
                       backgroundColor: "rgba(60, 60, 60, 0.85)",
                     },
                     content: {
-                                         },
+                     
+                    },
                   }}
                 >
                  <BioData/>
@@ -66,7 +63,10 @@ export default function Home() {
               PROJECTS
             </button>
             {setProjectsIsOpen && (
-              <div className={styles.aboutwrapper}>
+              <div
+              className={styles.aboutwrapper}
+              
+              >
                 <div className={styles.modalpositioning}>
                   <Modal
                     className={styles.modal}
@@ -100,9 +100,42 @@ export default function Home() {
         </p>
       </div>
       <div className={styles.rightsidehome}>
-        <div className={styles.imgshadowteal}></div>
-        <div className={styles.imgshadoworange}></div>
-        <div className={styles.imgshadowpink}></div>
+        <motion.div 
+    initial="hidden" animate="visible" variants={{ 
+      hidden: {
+          opacity: 0
+      },
+  visible: {
+      opacity: .5,
+      transition: {
+          delay: 1.2
+      }
+  },
+  }} className={styles.imgshadowteal}></motion.div>
+        <motion.div 
+    initial="hidden" animate="visible" variants={{ 
+      hidden: {
+          opacity: 0
+      },
+  visible: {
+      opacity: .5,
+      transition: {
+          delay: 1.3
+      }
+  },
+  }}  className={styles.imgshadoworange}></motion.div>
+        <motion.div 
+    initial="hidden" animate="visible" variants={{ 
+      hidden: {
+          opacity: 0
+      },
+  visible: {
+      opacity: .5,
+      transition: {
+          delay: 1.4
+      }
+  },
+  }}  className={styles.imgshadowpink}></motion.div>
         <img
           src="/rhopolaroid.png"
           alt="Rhoda Phillips-Osei"
@@ -110,5 +143,6 @@ export default function Home() {
         ></img>
       </div>
     </motion.div>
+    </div>
   );
 }

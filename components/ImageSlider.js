@@ -3,6 +3,7 @@ import { SliderData } from "./SliderData";
 import Image from "next/image";
 import styles from "../styles/ImageSlider.module.css";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
+import { motion } from "framer-motion"
 
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -23,7 +24,21 @@ const ImageSlider = ({ slides }) => {
   }
 
   return (
-    <div className="wrapper">
+    <motion.div 
+    initial="hidden" animate="visible" variants={{ 
+      hidden: {
+          // scale: .8,
+          opacity: 0
+      },
+  visible: {
+      // scale: 1,
+      opacity: 1,
+      transition: {
+          delay: .1
+      }
+  },
+  }}
+    className="wrapper">
       <section className={styles.slider}>
         <div className={styles.imgcontainer}>
           {" "}
@@ -73,7 +88,7 @@ const ImageSlider = ({ slides }) => {
           })}{" "}
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 
