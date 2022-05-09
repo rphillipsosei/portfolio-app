@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState } from 'react'
 import Head from "next/head"
 import styles from "../styles/Contact.module.css"
 import { motion } from "framer-motion"
@@ -6,13 +6,14 @@ import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 
 
-// toast.configure()
+
 export default function Contact() {
  
+  const [val, setVal] = useState();
   const form = useRef();
 
 const success = () => {
-  toast('Message failed to send. Please contact me on LinkedIn, or try again later!', {
+  toast('Message delivered!', {
     style: {
       border: '2px solid #2093A5',
       marginTop: '7rem',
@@ -41,9 +42,11 @@ const failure = () => {
       .then((result) => {
           console.log(result.text);
           success()
+          setVal("")
       }, (error) => {
           console.log(error.text);
           failure()
+          setVal("")
       });
   };
   
@@ -81,15 +84,15 @@ const failure = () => {
             <form ref={form} onSubmit={sendEmail} method="POST"className={styles.form}>
             <div class="form-group" id="form-control">
     <label for="exampleFormControlInput1">Name</label><br></br>
-    <input name="name" class="form-control" id="exampleFormControlInput1" ></input>
+    <input name="name" value={val} class="form-control" id="exampleFormControlInput1" ></input>
   </div>
   <div class="form-group" id="form-control">
     <label for="exampleFormControlInput1">Email address</label><br></br>
-    <input name="email" type="email" class="form-control" id="exampleFormControlInput1" ></input>
+    <input name="email" value={val} type="email" class="form-control" id="exampleFormControlInput1" ></input>
   </div>
   <div class="form-group" id="form-control">
     <label for="exampleFormControlTextarea1">Message</label><br></br>
-    <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea name="message" value={val} class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
               <input type="hidden" name="_next" value="http://localhost:3000/thanks"></input>
               <input type="hidden" name="_subject" value="New message from rhoda.tech"></input>
