@@ -3,7 +3,7 @@ import { SliderData } from "./SliderData";
 import Image from "next/image";
 import styles from "../styles/ImageSlider.module.css";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -24,28 +24,27 @@ const ImageSlider = ({ slides }) => {
   }
 
   return (
-    <motion.div 
-    initial="hidden" animate="visible" variants={{ 
-      hidden: {
-          // scale: .8,
-          opacity: 0
-      },
-  visible: {
-      // scale: 1,
-      opacity: 1,
-      transition: {
-          delay: .1
-      }
-  },
-  }}
-    className="wrapper">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {
+          opacity: 0,
+        },
+        visible: {
+          opacity: 1,
+          transition: {
+            delay: 0.1,
+          },
+        },
+      }}
+      className="wrapper"
+    >
       <section className={styles.slider}>
         <div className={styles.imgcontainer}>
-          {" "}
           <BiLeftArrow className={styles.leftarrow} onClick={prevSlide} />
           <div align="center" className={styles.header}>
             <h1>Projects</h1>
-            
           </div>
           <BiRightArrow className={styles.rightarrow} onClick={nextSlide} />
           {SliderData.map((slide, index) => {
@@ -57,18 +56,24 @@ const ImageSlider = ({ slides }) => {
                 {index === current && (
                   <div className={styles.slidercontent}>
                     <div className={styles.projecttitle}>
-                      <i>{slide.title}</i>
-                     
+                      <i>{slide.title}</i><br></br>
+                      <p>(hover or click to zoom in)</p>
                     </div>
-                    <div className={styles.projectcontainer}>
-                    <Image
-                      src={slide.image}
-                      alt="Project gif"
-                      className={styles.image}
-                      width={slide.width}
-                      height={slide.height}
-                    />
-                    </div>
+                    <motion.div 
+                    whileHover={{
+                      scale: 1.5,
+                      transition: { duration: 1 },
+                    }}
+                    whileTap={{ scale: 0.9 }}
+                    className={styles.projectcontainer}>
+                      <Image
+                        src={slide.image}
+                        alt="Project gif"
+                        className={styles.image}
+                        width={slide.width}
+                        height={slide.height}
+                      />
+                    </motion.div>
                     <div className={styles.projectdesc}>
                       {slide.description} <br></br>
                       <br></br>
@@ -76,9 +81,14 @@ const ImageSlider = ({ slides }) => {
                       <br></br>
                       {slide.technologies}
                       <br></br> <br></br>
-                      <br></br>
                       <p className={styles.viewapp}>
-                        <b><u><a href={slide.github}>View source code on Github</a></u></b>
+                        <b>
+                          <u>
+                            <a>
+                              View source code on Github
+                            </a>
+                          </u>
+                        </b>
                       </p>
                     </div>
                   </div>

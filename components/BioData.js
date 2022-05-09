@@ -20,7 +20,7 @@ function BioData() {
           <div className={styles.blurb}>
             <p>
               <br></br>
-              <br></br>{" "}
+              <br></br>
               <b>
                 Hi!<br></br><br></br> <i>My name is Rhoda, and I am a Full Stack Developer
                 from Toronto, Ontario, Canada.</i>

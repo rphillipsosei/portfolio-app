@@ -1,10 +1,23 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Head from "next/head"
 import styles from "../styles/Contact.module.css"
 import { motion } from "framer-motion"
-
+import emailjs from '@emailjs/browser';
+import Link from 'next/link'
 export default function Contact() {
  
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_ayt7rnv', 'template_znkglms', form.current, 'jPUiz2BDB4KS4iN9p')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   
   return (
     <div>
@@ -36,27 +49,30 @@ export default function Contact() {
             animate={{ translateX: 0 }}
             transition={{ duration: 1 }}
           >
-            <form action="https://formsubmit.co/rhodaphillipsosei@gmail.com" method="POST"className={styles.form}>
+            <form ref={form} onSubmit={sendEmail} method="POST"className={styles.form}>
             <div class="form-group" id="form-control">
     <label for="exampleFormControlInput1">Name</label><br></br>
-    <input  class="form-control" id="exampleFormControlInput1" ></input>
+    <input name="name" class="form-control" id="exampleFormControlInput1" ></input>
   </div>
   <div class="form-group" id="form-control">
     <label for="exampleFormControlInput1">Email address</label><br></br>
-    <input type="email" class="form-control" id="exampleFormControlInput1" ></input>
+    <input name="email" type="email" class="form-control" id="exampleFormControlInput1" ></input>
   </div>
   <div class="form-group" id="form-control">
     <label for="exampleFormControlTextarea1">Message</label><br></br>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
               <input type="hidden" name="_next" value="http://localhost:3000/thanks"></input>
               <input type="hidden" name="_subject" value="New message from rhoda.tech"></input>
               <br></br>
-              <button id="contact-btn" >
+              <Link href="/thanks">
+                <a>
+                  <button id="contact-btn" value="Send">
               SEND
-            </button>
+            </button></a></Link>
            
             </form>
+
           </div>
        </container></div>
         </container>

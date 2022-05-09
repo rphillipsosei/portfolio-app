@@ -23,8 +23,8 @@
   z-index: 10;
   cursor: pointer;
   user-select: none;
+  z-index: 1;
 }
-
 
 .leftarrow {
   position: absolute;
@@ -34,6 +34,7 @@
   color: #ffff;
   z-index: 10;
   cursor: pointer;
+  z-index: 1;
 }
 
 .header h1 {
@@ -55,6 +56,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .projecttitle {
@@ -70,18 +73,27 @@
   margin-bottom: 0.5rem;
 }
 
+.projecttitle p {
+  font-size: 14px;
+  margin-top: -1.7rem;
+}
+
 .projectdesc {
   margin-top: 1rem;
   justify-content: center;
   width: 40.6vw;
-  height: 19vh;
-  background-color:  rgba(255, 255, 255, 0.65);
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.65);
   font-family: "Quicksand", sans-serif;
   font-size: 100%;
   z-index: 0;
   padding: 1rem;
   text-align: center;
   margin-top: 0.5rem;
+  min-height: 100px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .slidercontent {
@@ -96,11 +108,11 @@
   display: flex;
 }
 
-.viewapp {
-  margin-top: -2rem;
+.viewapp a {
   font-size: 16px;
   text-decoration: none;
-  color: black
+  color: black;
+  cursor: pointer;
 }
 
 /* @media screen and (max-width: 1700px) {

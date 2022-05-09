@@ -103,7 +103,7 @@ export default function Home() {
         <motion.div 
     initial="hidden" animate="visible" variants={{ 
       hidden: {
-          opacity: 0
+          opacity: 0,
       },
   visible: {
       opacity: .5,
@@ -137,7 +137,7 @@ export default function Home() {
   },
   }}  className={styles.imgshadowpink}></motion.div>
         <img
-          src="/rhopolaroid.png"
+          src="/rhopolaroid2.png"
           alt="Rhoda Phillips-Osei"
           className={styles.homeimg}
         ></img>
