@@ -82,17 +82,17 @@ const failure = () => {
             transition={{ duration: 1 }}
           >
             <form ref={form} onSubmit={sendEmail} method="POST"className={styles.form}>
-            <div class="form-group" id="form-control">
-    <label for="exampleFormControlInput1">Name</label><br></br>
-    <input name="name" value={val} class="form-control" id="exampleFormControlInput1" ></input>
+            <div className="form-group" id="form-control">
+    <label htmlFor="exampleFormControlInput1">Name</label><br></br>
+    <input name="name" value={val} className="form-control" id="exampleFormControlInput1" ></input>
   </div>
-  <div class="form-group" id="form-control">
-    <label for="exampleFormControlInput1">Email address</label><br></br>
-    <input name="email" value={val} type="email" class="form-control" id="exampleFormControlInput1" ></input>
+  <div className="form-group" id="form-control">
+    <label htmlFor="exampleFormControlInput1">Email address</label><br></br>
+    <input name="email" value={val} type="email" className="form-control" id="exampleFormControlInput1" ></input>
   </div>
-  <div class="form-group" id="form-control">
-    <label for="exampleFormControlTextarea1">Message</label><br></br>
-    <textarea name="message" value={val} class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <div className="form-group" id="form-control">
+    <label htmlFor="exampleFormControlTextarea1">Message</label><br></br>
+    <textarea name="message" value={val} className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
               <input type="hidden" name="_next" value="http://localhost:3000/thanks"></input>
               <input type="hidden" name="_subject" value="New message from rhoda.tech"></input>

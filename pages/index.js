@@ -35,7 +35,7 @@ export default function Home() {
         <p>
           <h1>Rhoda Phillips-Osei    </h1>
           <h3>Full Stack Web Developer</h3>
-          <div class={styles.homebtns}>
+          <div className={styles.homebtns}>
             <button id="home-btn" onClick={() => setAboutIsOpen(true)}>
               ABOUT
             </button>
