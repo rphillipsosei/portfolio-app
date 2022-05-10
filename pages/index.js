@@ -106,7 +106,7 @@ export default function Home() {
           opacity: 0,
       },
   visible: {
-      opacity: .5,
+      opacity: .8,
       transition: {
           delay: 1.2
       }
