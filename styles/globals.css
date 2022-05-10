@@ -5,8 +5,15 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Quicksand", sans-serif;
-  background-color: #ffffff;
-  background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
+  background-color: #ffff;
+  /* background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png"); */
+  /* background-image: url("https://www.transparenttextures.com/patterns/cartographer.png"); */
+  /* background-image: url("https://www.transparenttextures.com/patterns/dust.png"); */
+  /* background-image: url("https://www.transparenttextures.com/patterns/leather.png"); */
+  /* background-image: url("https://www.transparenttextures.com/patterns/light-grey-floral-motif.png"); */
+  /* background-color: #f7f0e4; */
+  /* background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png"); */
+background-image: url("https://www.transparenttextures.com/patterns/cream-dust.png");
 }
 
 
@@ -52,7 +59,7 @@ a {
 
 #social-icons {
   margin-top: 0.5rem;
-  width: 10%;
+  width: 10rem;
   font-size: 30px;
   display: flex;
   justify-content: space-between;
@@ -159,4 +166,10 @@ font-family: "Quicksand"
 .hovertext:hover:before {
   opacity: 1;
   visibility: visible;
+}
+
+#icon-container {
+  display: flex !important;
+  justify-content: center;
+  width: 100%
 }

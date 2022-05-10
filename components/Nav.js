@@ -9,24 +9,15 @@ export default Nav = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link href="/">
+     
+        <div className="container-fluid" id="icon-container">
+          <div>
+           <Link href="/">
           <a id="homelink">
             <AiFillHome />
           </a>
         </Link>
-        <div className="container-fluid">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+        
             <div id="social-icons">
               <Link href="https://linkedin.com/in/rphillipsosei">
                 <a id="navlink">

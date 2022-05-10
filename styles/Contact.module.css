@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Satisfy&display=swap');
 
 .contactpage {
   flex-direction: column;
@@ -45,8 +45,8 @@ top: 20%;
   justify-content: center;
   width: 41.5vw;
   background-color: #2093a5;
-  font-family: "Quicksand", sans-serif;
-  font-size: 40px;
+  font-family: "Satisfy", sans-serif;
+  font-size: 50px;
   z-index: 0;
   margin-bottom: 1rem;
 }

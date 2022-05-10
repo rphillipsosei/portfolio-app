@@ -26,40 +26,46 @@
 .homeimg {
   margin-left: 15%;
   position: absolute;
-  right: 12%;
-  height: 52%;
-  width: 23%;
+  right: 13.4%;
+  top: 22.6%;
+  height: 51%;
+  width: 22.5%;
   z-index: 4;
   transition-delay: 5s;
+
 }
 
 .imgshadowteal {
   position: relative;
   z-index: 100;
-  transform: rotate(15deg);
+
   margin-left: 15%;
-  background-color: #2093a5;
+  background-color: pink;
   opacity: 50%;
   position: absolute;
-  height: 52%;
-  width: 23%;
-  right: 12%;
+  height: 37.4%;
+  width: 22.5%;
+  right: 13.4%;
+  top: 36.4%;
   z-index: 3;
-  
+  outline-offset: 12px;
+outline: 5px dotted black;
+background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
 
 }
 
 .imgshadoworange {
   position: relative;
   z-index: 100;
-  transform: rotate(30deg);
+  transform: rotate(45deg);
   margin-left: 15%;
   background-color: orange;
   opacity: 50%;
   position: absolute;
-  height: 52%;
-  width: 23%;
-  right: 12%;
+  height: 41.3%;
+  width: 22.8%;
+  right: 13.2%;
+  top: 30%;
   z-index: 2;
  
 }
@@ -70,13 +76,14 @@
   z-index: 100;
   transform: rotate(45deg);
   margin-left: 15%;
-  background-color: pink;
+  background-color: #2093a5;
   opacity: 50%;
   position: absolute;
-  height: 52%;
-  width: 23%;
-  right: 12%;
+  height: 41%;
+  width: 22.8%;
+  right: 13.3%;
   z-index: 1;
+  top: 37%
 
 }
 
@@ -88,7 +95,7 @@
   margin-left: 10%;
 }
 .leftsidehome h1 {
-  font-size: 110px;
+  font-size: 118px;
   font-family: "Satisfy", sans-serif;
   width: 130%;
   text-align: center;
